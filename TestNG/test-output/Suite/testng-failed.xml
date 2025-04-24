@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="OPD_Flow_wise.OPD_Pharmacy">
+        <methods>
+          <include name="opdPharmacy"/>
+        </methods>
+      </class> <!-- OPD_Flow_wise.OPD_Pharmacy -->
+      <class name="OPD_Flow_wise.OPD_Pathologist">
+        <methods>
+          <include name="pathologist"/>
+        </methods>
+      </class> <!-- OPD_Flow_wise.OPD_Pathologist -->
+      <class name="OPD_Flow_wise.LAB_FO">
+        <methods>
+          <include name="labFO"/>
+        </methods>
+      </class> <!-- OPD_Flow_wise.LAB_FO -->
+      <class name="OPD_Flow_wise.Book_Appointment">
+        <methods>
+          <include name="bookAppointment"/>
+        </methods>
+      </class> <!-- OPD_Flow_wise.Book_Appointment -->
+      <class name="OPD_Flow_wise.OPD_Lab_Technician">
+        <methods>
+          <include name="labTechnician"/>
+        </methods>
+      </class> <!-- OPD_Flow_wise.OPD_Lab_Technician -->
+      <class name="OPD_Flow_wise.OPD_Phlebotomist">
+        <methods>
+          <include name="assignPhlebotomist"/>
+        </methods>
+      </class> <!-- OPD_Flow_wise.OPD_Phlebotomist -->
+      <class name="OPD_Flow_wise.OPD_EMR">
+        <methods>
+          <include name="opd_EMR"/>
+        </methods>
+      </class> <!-- OPD_Flow_wise.OPD_EMR -->
+      <class name="OPD_Flow_wise.OPD_Lab">
+        <methods>
+          <include name="bookTest"/>
+        </methods>
+      </class> <!-- OPD_Flow_wise.OPD_Lab -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

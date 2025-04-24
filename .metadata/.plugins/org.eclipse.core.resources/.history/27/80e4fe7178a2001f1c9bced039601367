@@ -1,0 +1,66 @@
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class UploadFile {
+
+	@SuppressWarnings("deprecation")
+	public static void main(String[] args) throws IOException, InterruptedException {
+		// TODO Auto-generated method stub
+		 ChromeDriver d = new ChromeDriver();
+		   d.manage().window().maximize();
+		   Thread.sleep(3000);
+		   // for page load
+		   d.get("https://opensource-demo.orangehrmlive.com/");          
+		   // Testing webpage
+		   Thread.sleep(3000);
+		   // for Implicit wait
+		             
+		   WebElement uname = d.findElement(By.xpath("//input[@placeholder='Username']"));          
+		   // Username.........ID
+		   uname.sendKeys("Admin");
+		   Thread.sleep(3000);     
+		   WebElement pwd = d.findElement(By.xpath("//input[@placeholder='Password']"));      
+		   // Password.........NAME
+		   pwd.sendKeys("admin123");
+		    
+		   WebElement loginb = d.findElement(By.xpath("//div[3]/button"));
+		   loginb.click();                                     
+		   // Loginbutton......XPATH
+		         
+		   Thread.sleep(3000); 
+		   WebElement pim = d.findElement(By.xpath("//div[2]/ul/li[2]/a"));
+		    pim.click();                                            // Admin tab-PIM
+		    Thread.sleep(3000); 
+		   WebElement config = d.findElement(By.xpath("//nav/ul/li[1]/span"));
+		    config.click();                                     //Configuration tab
+		    Thread.sleep(3000); 
+		    WebElement data_imp = d.findElement(By.xpath("//div[1]/div/div/div/div[2]/div/div[1]"));
+		    data_imp.click();                                  //Data Import tab.....PARTIALLINKT
+		    Thread.sleep(3000); 
+		 
+		    // UPLOADING FILE USING AutoIT....
+		     
+		    WebElement browser = d.findElement(By.xpath("//input[@id='pimCsvImport_csvFile']"));   //Browse button
+		    browser.click();                                
+		    System.out.println("1");
+		 
+		    Thread.sleep(3000); 
+		  Runtime.getRuntime().exec("/home/unicode/Downloads/Wallpaper (1).jpg");
+		  System.out.println("2");
+		  Thread.sleep(3000);
+		 
+		  WebElement upload = d.findElement(By.id("btnSave"));              //Upload button
+		   upload.click();
+		   System.out.println("3");        
+		  
+		   System.out.println("File Uploaded Successfully");           // Confirmation message
+		             
+		      }
+
+}
+
+

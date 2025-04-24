@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.openqa.selenium.Keys"/>
+    <fullyQualifiedTypeName name="com.microsoft.playwright.Page.LocatorOptions"/>
+    <fullyQualifiedTypeName name="OPD_Flow_wise.Book_Appointment"/>
+    <fullyQualifiedTypeName name="OPD_Flow_wise.OPD_EMR"/>
+    <fullyQualifiedTypeName name="OPD_Flow_wise.OPD_Lab"/>
+    <fullyQualifiedTypeName name="OPD_Flow_wise.OPD_Phlebotomist"/>
+    <fullyQualifiedTypeName name="OPD_Flow_wise.OPD_Pathologist"/>
+    <fullyQualifiedTypeName name="OPD_Flow_wise.OPD_Pharmacy"/>
+    <fullyQualifiedTypeName name="OPD_Flow_wise.OPD_Lab_Technician"/>
+    <fullyQualifiedTypeName name="OPD_Flow_wise.LAB_FO"/>
+    <fullyQualifiedTypeName name="IPD_Flow_wise.IPD_Pharmacy"/>
+    <fullyQualifiedTypeName name="IPD_Flow_wise.IPD_Lab_FO"/>
+    <fullyQualifiedTypeName name="OPD_Flow_wise.OPD_Driver"/>
+    <fullyQualifiedTypeName name="com.microsoft.playwright.Playwright"/>
+    <fullyQualifiedTypeName name="java.util.PrimitiveIterator"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+    <fullyQualifiedTypeName name="sewa.Sewa_Login"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By.ByXPath"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>

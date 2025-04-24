@@ -1,0 +1,77 @@
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
+import com.microsoft.playwright.*;
+
+public class OPD_Lab
+{
+public static void main(String[] args) throws InterruptedException 
+{
+try (Playwright playwright = Playwright.create()) 
+{
+	Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+	Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+	int width = (int) screenSize.getWidth();
+    int height = (int) screenSize.getHeight();
+    BrowserContext context = browser.newContext(new Browser.NewContextOptions().setViewportSize(width, height));
+	Page page = context.newPage();
+	
+
+// Replace 'yourURL' with the URL you want to navigate to
+page.navigate("https://demoui-ecare.mightcode.com");
+page.locator("//input[@placeholder='EMAIL/USERNAME']").fill("105");
+page.getByPlaceholder("PASSWORD").fill("Test@123");
+page.click("//button[@type='submit']");
+
+
+// Search the Patient
+String uhid = "ECARE_0000001525";
+page.click("//div/ul/li[2]");
+page.fill("input[placeholder='Search Patient Name / UHID']", uhid);
+Thread.sleep(1000);
+page.click("//*[contains(text(),'Book Test')]");
+Thread.sleep(2000);
+Locator checkboxes = page.locator("//input[@type='checkbox']");
+
+// Get the count of matching elements
+int count = checkboxes.count();
+System.out.println("Number of checkboxes: " + count);
+
+// Click all matching elements
+for (int i = 0; i < count; i++) 
+	{
+		checkboxes.nth(i).click();
+	}
+page.locator("//*[contains(text(),'Confirm')]").click();
+
+//Payement
+Thread.sleep(2000);
+page.locator("//*[contains(text(),'Proceed')]").click();		
+page.locator("//*[contains(text(),'Generate Invoice')]").click();
+page.locator("//*[contains(text(),'Cancel')]").click();
+
+Thread.sleep(2000);
+
+//Logout
+page.locator("//div[6]/div/span").click();
+page.locator("//ul/li[4]/span[2]/span").click();
+
+
+// Login with Lab front office
+
+page.locator("//input[@placeholder='EMAIL/USERNAME']").fill("502");
+page.getByPlaceholder("PASSWORD").fill("Test@123");
+page.click("//button[@type='submit']");
+
+// OPD Patient 
+
+page.click("//div/ul/li[2]");
+page.fill("//div[1]/div/span/input", uhid);
+Thread.sleep(1000);
+page.click("//*[contains(text(),'Accept')]");
+Thread.sleep(2000);
+
+
+}
+}
+}

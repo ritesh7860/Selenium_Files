@@ -1,0 +1,26 @@
+package IPD_Flow;
+
+import java.util.List;
+
+import com.microsoft.playwright.Browser;
+import com.microsoft.playwright.BrowserContext;
+import com.microsoft.playwright.BrowserType;
+import com.microsoft.playwright.Page;
+import com.microsoft.playwright.Playwright;
+
+public class IPD_Nurse {
+
+	public static void main(String[] args) 
+	{
+		Playwright playwright = Playwright.create();
+		Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setArgs(List.of("--start-maximized")));
+		BrowserContext context = browser.newContext(new Browser.NewContextOptions().setViewportSize(null));
+		Page page = context.newPage();
+		page.navigate("https://devui-ecare.mightcode.com");
+		page.locator("//input[@placeholder='EMAIL/USERNAME']").fill("sneha@mightcode.com");
+		page.getByPlaceholder("PASSWORD").fill("Nurse@123");
+		page.click("//button[@type='submit']");
+		String uhid = "ECARE_0000000526";
+	}
+
+}

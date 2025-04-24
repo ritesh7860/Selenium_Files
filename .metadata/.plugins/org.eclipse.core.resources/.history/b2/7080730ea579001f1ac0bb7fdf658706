@@ -1,0 +1,83 @@
+package OPD_Flow_wise;
+
+import java.util.List;
+
+import com.microsoft.playwright.Browser;
+import com.microsoft.playwright.BrowserContext;
+import com.microsoft.playwright.BrowserType;
+import com.microsoft.playwright.Page;
+import com.microsoft.playwright.Playwright;
+
+public class OPD_Driver {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		Playwright playwright = Playwright.create();
+		Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setArgs(List.of("--start-maximized")));
+		BrowserContext context = browser.newContext(new Browser.NewContextOptions().setViewportSize(null));
+		Page page = context.newPage();
+		
+//		String uhid = "ECARE_0000001199";
+		
+		String name ="Himani saxsena";
+		String mail="himani12@mightcode.com";
+		String contact="9412787410";
+		String id="L4170707";
+		
+		Login login = new Login();
+		Logout out = new Logout();
+		
+		login.login_method("105", "Test@123",page);
+		Patient_Registration reg =  new Patient_Registration();
+		String uhid = reg.registration(page, name, mail, contact, id);
+		
+		Book_Appointment book = new Book_Appointment();
+		book.bookAppointment(page,uhid);
+		out.logout(page);
+		Thread.sleep(1000);
+		
+		login.login_method("pakhisingh", "Pakhi@123", page);
+		OPD_EMR emr = new OPD_EMR();
+		emr.opd_EMR(page, uhid);
+		out.logout(page);
+		Thread.sleep(1000);
+		
+		login.login_method("105", "Test@123",page);
+		OPD_Lab book_test = new OPD_Lab();
+		book_test.bookTest(page,uhid);
+		out.logout(page);
+		Thread.sleep(1000);
+		
+		login.login_method("502", "Test@123",page);
+		LAB_FO lab_fo = new LAB_FO();
+		lab_fo.labFO(page, uhid);
+		out.logout(page);
+		Thread.sleep(1000);
+		
+		login.login_method("504", "Test@123",page);
+		OPD_Phlebotomist assign = new OPD_Phlebotomist();
+		assign.assignPhlebotomist(page,uhid);
+		out.logout(page);
+		Thread.sleep(1000);
+		
+		login.login_method("175", "Test@123",page);
+		OPD_Lab_Technician technician = new OPD_Lab_Technician();
+		technician.labTechnician(page, uhid);
+		out.logout(page);
+		Thread.sleep(1000);
+		
+		login.login_method("506", "Test@123",page);
+		OPD_Pathologist patho = new OPD_Pathologist();
+		patho.pathologist(page, uhid);
+		out.logout(page);
+		Thread.sleep(1000);
+		
+		login.login_method("290", "Test@123",page);
+		OPD_Pharmacy opd_pharmacy = new OPD_Pharmacy();
+		opd_pharmacy.opdPharmacy(page, uhid);
+		out.logout(page);
+		Thread.sleep(1000);
+		
+	}
+
+}

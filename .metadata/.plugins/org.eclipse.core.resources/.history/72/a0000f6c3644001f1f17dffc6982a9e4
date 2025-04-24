@@ -1,0 +1,44 @@
+package IPD_Flow;
+
+import java.util.List;
+
+import com.microsoft.playwright.Browser;
+import com.microsoft.playwright.BrowserContext;
+import com.microsoft.playwright.BrowserType;
+import com.microsoft.playwright.Page;
+import com.microsoft.playwright.Playwright;
+
+public class IPD_Nurse {
+
+	public static void main(String[] args) 
+	{
+		Playwright playwright = Playwright.create();
+		Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setArgs(List.of("--start-maximized")));
+		BrowserContext context = browser.newContext(new Browser.NewContextOptions().setViewportSize(null));
+		Page page = context.newPage();
+		page.navigate("https://devui-ecare.mightcode.com");
+		page.locator("//input[@placeholder='EMAIL/USERNAME']").fill("sneha@mightcode.com");
+		page.getByPlaceholder("PASSWORD").fill("Nurse@123");
+		page.click("//button[@type='submit']");
+		String uhid = "ECARE_0000000526";
+		page.fill("input[placeholder='Search Patient Name / UHID']", uhid);
+		page.click("//tbody/tr[2]/td[2]/div");
+		
+		//Click on Vitals section and fill Vitals
+		
+		page.click("(//div[1]/ul/li[2])[2]");       
+		page.locator("//input[@name='Heart Rate']").fill("98");
+        page.locator("//input[@name='Pulse']").fill("98");
+        page.locator("//input[@name='Blood Sugar']").fill("120");
+        page.locator("//input[@name='Systolic']").fill("130");
+        page.locator("//input[@name='Diastolic']").fill("85");
+        page.locator("//input[@name='Temperature']").fill("98");
+        page.locator("//input[@name='RR']").fill("18");
+        page.locator("//input[@name='SPO2']").fill("98");
+        page.locator("//input[@name='Height']").fill("145");
+        page.locator("//input[@name='Weight']").fill("55");
+        page.click("//button[2]");
+		
+	}
+
+}

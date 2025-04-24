@@ -1,0 +1,52 @@
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Company_Details {
+
+	public static void main(String[] args) 
+	{
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("https://clutch.co/us/developers/information-technology-industry");
+		driver.manage().window().maximize();
+		
+		for(int i=1;i<=64;i++) {
+			 String xpath1 = String.format("(//div/div[1]/h3/a)[%d]", i);
+			 String xpath2 = String.format("(//*[contains(@class, 'min-project-size')])[%d]", i);
+			 String xpath3 = String.format("(//*[contains(@class, 'hourly-rate')])[%d]", i);
+			 String xpath4 = String.format("(//*[contains(@class, 'employees-count')])[%d]", i);
+			 String xpath5 = String.format("(//*[contains(@class, 'employees-count')]/following-sibling::div)[%d]", i);
+			 String xpath6 = String.format("(//div[@class='provider__services-list'])[%d]", i);
+			 String xpath7 = String.format("(//p[contains(@class, 'project-highlight-text')])[%d]", i);
+			 String xpath8 = String.format("(//div[@class='provider__cta-container']/a[1])[%d]", i);
+			 String xpath9 = String.format("(//div[@class='provider__cta-container']/a[2])[%d]", i);
+			 
+             // Wait for the element to be present and visible
+             WebElement name = driver.findElement(By.xpath(xpath1));
+             WebElement min_Project_Size = driver.findElement(By.xpath(xpath2));
+             WebElement hourly_rate = driver.findElement(By.xpath(xpath3));
+             WebElement employee_count = driver.findElement(By.xpath(xpath4));
+             WebElement location = driver.findElement(By.xpath(xpath5));
+             WebElement service_Provided = driver.findElement(By.xpath(xpath6));
+             WebElement description = driver.findElement(By.xpath(xpath7));
+             WebElement profile = driver.findElement(By.xpath(xpath8));
+             WebElement website = driver.findElement(By.xpath(xpath9));
+             
+
+             System.out.println("Name " + i + ": " + name.getText());
+             System.out.println("Project Size " + i + ": " + min_Project_Size.getText());
+             System.out.println("Hourly Rate " + i + ": " + hourly_rate.getText());
+             System.out.println("Employee Count " + i + ": " + employee_count.getText());
+             System.out.println("Location " + i + ": " + location.getText());
+             System.out.println("Service provided " + i + ": " + service_Provided.getText());
+             System.out.println("Description " + i + ": " + description.getText());
+             System.out.println("Profile Link " + i + ": " + profile.getAttribute("href"));
+             System.out.println("Website Link" + i + ": " + website.getAttribute("href"));
+             System.out.println("\n");
+             //*[@id="pagination-nav"]/div/a[8]
+		}
+	}
+
+}

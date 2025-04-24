@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.testng.eclipse.launchconfig">
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.testng.remote.RemoteTestNG"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="For_Junit_Testing"/>
+    <mapAttribute key="org.testng.eclipse.ALL_CLASS_METHODS"/>
+    <listAttribute key="org.testng.eclipse.CLASS_TEST_LIST">
+        <listEntry value="IPD_Flow_wise.IPD_Phlebotomist"/>
+        <listEntry value="OPD_Flow_wise.LAB_FO"/>
+        <listEntry value="OPD_Flow.Patient_Registration"/>
+        <listEntry value="IPD_Flow.IPD_Pharmaacy"/>
+        <listEntry value="OPD_Flow_wise.Login"/>
+        <listEntry value="IPD_Flow_wise.IPD_Lab_FO"/>
+        <listEntry value="OPD_Flow.OPD_Lab_Technician"/>
+        <listEntry value="OPD_Flow.OPD_Lab"/>
+        <listEntry value="IPD_Flow.IPD_Admission"/>
+        <listEntry value="OPD_Flow_wise.OPD_Phlebotomist"/>
+        <listEntry value="OPD_Flow.OPD_EMR"/>
+        <listEntry value="IPD_Flow_wise.IPD_Pathologist"/>
+        <listEntry value="OPD_Flow_wise.OPD_Driver"/>
+        <listEntry value="OPD_Flow_wise.OPD_Pathologist"/>
+        <listEntry value="IPD_Flow.IPD_Lab_Technician"/>
+        <listEntry value="IPD_Flow_wise.IPD_Nurse"/>
+        <listEntry value="IPD_Flow_wise.Login"/>
+        <listEntry value="OPD_Flow_wise.Patient_Registration"/>
+        <listEntry value="IPD_Flow_wise.IPD_Pharmacy"/>
+        <listEntry value="IPD_Flow.IPD_Pathologist"/>
+        <listEntry value="OPD_Flow_wise.Book_Appointment"/>
+        <listEntry value="IPD_Flow.IPD_Nurse"/>
+        <listEntry value="OPD_Flow_wise.OPD_EMR"/>
+        <listEntry value="OPD_Flow_wise.OPD_Lab"/>
+        <listEntry value="IPD_Flow_wise.IPD_Driver"/>
+        <listEntry value="OPD_Flow.Book_Appointment"/>
+        <listEntry value="IPD_Flow.IPD_Phlebotomist"/>
+        <listEntry value="OPD_Flow.OPD_Pathologist"/>
+        <listEntry value="OPD_Flow_wise.Logout"/>
+        <listEntry value="OPD_Flow.OPD_Pharmacy"/>
+        <listEntry value="OPD_Flow_wise.OPD_Pharmacy"/>
+        <listEntry value="IPD_Flow.Bed_Allotment"/>
+        <listEntry value="IPD_Flow_wise.IPD_Admission"/>
+        <listEntry value="OPD_Flow.OPD_Phlebotomist"/>
+        <listEntry value="IPD_Flow.IPD_EMR"/>
+        <listEntry value="IPD_Flow_wise.IPD_EMR"/>
+        <listEntry value="IPD_Flow_wise.Logout"/>
+        <listEntry value="IPD_Flow.IPD_Lab_FO"/>
+        <listEntry value="OPD_Flow_wise.OPD_Lab_Technician"/>
+        <listEntry value="IPD_Flow_wise.IPD_Lab_Technician"/>
+        <listEntry value="IPD_Flow_wise.Bed_Allotment"/>
+    </listAttribute>
+    <listAttribute key="org.testng.eclipse.METHOD_TEST_LIST"/>
+    <listAttribute key="org.testng.eclipse.PACKAGE_TEST_LIST"/>
+    <stringAttribute key="org.testng.eclipse.PRE_DEFINED_LISTENERS" value=""/>
+    <intAttribute key="org.testng.eclipse.TYPE" value="1"/>
+</launchConfiguration>

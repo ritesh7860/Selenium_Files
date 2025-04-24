@@ -1,0 +1,81 @@
+package IPD_Flow_wise;
+
+import java.util.List;
+
+import com.microsoft.playwright.Browser;
+import com.microsoft.playwright.BrowserContext;
+import com.microsoft.playwright.BrowserType;
+import com.microsoft.playwright.Page;
+import com.microsoft.playwright.Playwright;
+
+public class IPD_Driver {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		Playwright playwright = Playwright.create();
+		Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setArgs(List.of("--start-maximized")));
+		BrowserContext context = browser.newContext(new Browser.NewContextOptions().setViewportSize(null));
+		Page page = context.newPage();
+		
+		String uhid = "ECARE_0000001845";
+		
+		Login login = new Login();
+		Logout out = new Logout();
+		
+		login.login_method("105", "Test@123", page);
+		IPD_Admission admission = new IPD_Admission();
+		admission.ipdAdmission(page, uhid);
+		out.logout(page);
+		
+		Thread.sleep(2000);
+		login.login_method("108", "Ward@123",page);
+		Bed_Allotment ward = new Bed_Allotment();
+		ward.bed_Allotment(page,uhid);
+		out.logout(page);
+		
+		Thread.sleep(2000);
+		login.login_method("Pakhisingh", "Pakhi@123",page);
+		IPD_EMR ipd_emr = new IPD_EMR();
+		ipd_emr.ipd_Emr(page, uhid);
+		out.logout(page);
+		
+		Thread.sleep(2000);
+		login.login_method("sneha@mightcode.com", "Nurse@123",page);
+		IPD_Nurse nurse = new IPD_Nurse();
+		nurse.nurseFlow(page, uhid);
+		out.logout(page);
+		
+		Thread.sleep(2000);
+		login.login_method("290", "Test@123", page);
+		IPD_Pharmacy ipd_pharmacy = new IPD_Pharmacy();
+		ipd_pharmacy.ipdPharmacy(page, uhid);
+		out.logout(page);
+		
+		Thread.sleep(2000);
+		login.login_method("502", "Test@123", page);
+		IPD_Lab_FO ipd_Lab_Fo = new IPD_Lab_FO();
+		ipd_Lab_Fo.ipd_Lab_Fo(page, uhid);
+		out.logout(page);
+		
+		Thread.sleep(2000);
+		login.login_method("504", "Test@123",page);
+		IPD_Phlebotomist assign = new IPD_Phlebotomist();
+		assign.ipdPhlebotomist(page,uhid);
+		out.logout(page);
+		
+		Thread.sleep(2000);
+		login.login_method("175", "Test@123",page);
+		IPD_Lab_Technician technician = new IPD_Lab_Technician();
+		technician.ipdlabTechnician(page, uhid);
+		out.logout(page);
+		
+		Thread.sleep(2000);
+		login.login_method("506", "Test@123",page);
+		IPD_Pathologist patho = new IPD_Pathologist();
+		patho.ipd_Pathologist(page, uhid);
+		out.logout(page);
+		
+
+	}
+
+}

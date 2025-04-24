@@ -1,0 +1,31 @@
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
+import com.microsoft.playwright.*;
+
+public class OPD_Lab
+{
+public static void main(String[] args) throws InterruptedException 
+{
+try (Playwright playwright = Playwright.create()) 
+{
+	Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+	Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+	int width = (int) screenSize.getWidth();
+    int height = (int) screenSize.getHeight();
+    BrowserContext context = browser.newContext(new Browser.NewContextOptions().setViewportSize(width, height));
+	Page page = context.newPage();
+	
+
+// Replace 'yourURL' with the URL you want to navigate to
+page.navigate("https://demoui-ecare.mightcode.com");
+page.locator("//input[@placeholder='EMAIL/USERNAME']").fill("ritesh@mightcode.com");
+page.getByPlaceholder("PASSWORD").fill("Doctor@123");
+page.click("//button[@type='submit']");
+
+
+// Search the Patient
+String uhid = "ECARE_0000001582";
+page.fill("input[placeholder='Search Patient Name / UHID']", uhid);
+Thread.sleep(1000);
+}

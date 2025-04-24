@@ -1,0 +1,10 @@
+package IPD_Flow;
+
+public class IPD_EMR {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

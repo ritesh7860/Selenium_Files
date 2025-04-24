@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-21T17:51:20 IST" name="Suite" finished-at="2025-04-21T17:51:23 IST" duration-ms="2952">
+    <groups>
+    </groups>
+    <test started-at="2025-04-21T17:51:20 IST" name="Test" finished-at="2025-04-21T17:51:23 IST" duration-ms="2952">
+      <class name="test.Main_Driver">
+        <test-method signature="openBrowser()[pri:0, instance:test.Main_Driver@7862f56]" started-at="2025-04-21T17:51:20 IST" name="openBrowser" finished-at="2025-04-21T17:51:20 IST" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+      </class> <!-- test.Main_Driver -->
+      <class name="test.DriverCalling">
+        <test-method signature="driverCalling()[pri:1, instance:test.DriverCalling@4f1bfe23]" started-at="2025-04-21T17:51:20 IST" name="driverCalling" finished-at="2025-04-21T17:51:23 IST" duration-ms="2656" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverCalling -->
+      </class> <!-- test.DriverCalling -->
+      <class name="test.Login">
+        <test-method signature="LoginUser()[pri:2, instance:test.Login@e19bb76]" started-at="2025-04-21T17:51:23 IST" name="LoginUser" finished-at="2025-04-21T17:51:23 IST" duration-ms="190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginUser -->
+      </class> <!-- test.Login -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

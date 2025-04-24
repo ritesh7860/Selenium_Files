@@ -1,0 +1,43 @@
+package IPD_Flow;
+
+import java.util.List;
+
+import com.microsoft.playwright.Browser;
+import com.microsoft.playwright.BrowserContext;
+import com.microsoft.playwright.BrowserType;
+import com.microsoft.playwright.Page;
+import com.microsoft.playwright.Playwright;
+
+public class IPD_EMR {
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+		Playwright playwright = Playwright.create();
+		Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setArgs(List.of("--start-maximized")));
+		BrowserContext context = browser.newContext(new Browser.NewContextOptions().setViewportSize(null));
+		Page page = context.newPage();
+		page.navigate("https://devui-ecare.mightcode.com");
+		page.locator("//input[@placeholder='EMAIL/USERNAME']").fill("ritesh@mightcode.com");
+		page.getByPlaceholder("PASSWORD").fill("Doctor@123");
+		page.click("//button[@type='submit']");
+		String uhid = "ECARE_0000000526";
+		page.click("//div/ul/li[2]");
+		page.fill("input[placeholder='Search Patient Name / UHID']", uhid);
+		Thread.sleep(1000);
+		page.fill("input[type='search'][id='rc_select_0']", "a");
+		page.click("div[name='ADAKVEO 10.00 mg/mL']");
+		page.fill("input[name='dose']", "1");
+		page.fill("input[type='search'][id='rc_select_2']", "as");
+		page.click("div[title='As directed']");
+		page.fill("input[type='search'][id='rc_select_3']", "after");
+		page.click("div[title='After Meal']");
+		page.fill("input[name='duration']", "1");
+		page.click("input[placeholder='Select Date']");
+		page.click("td[class='ant-picker-cell ant-picker-cell-in-view ant-picker-cell-today']");
+//		page.click("span[aria-label='edit']");
+//		page.fill("textarea[class='ant-input css-eq8lji ant-input-outlined']", "Take medicine with warm water");
+//		page.click("//div[3]/div/div[3]/button");
+		page.click("span[aria-label='plus']");
+	}
+
+}

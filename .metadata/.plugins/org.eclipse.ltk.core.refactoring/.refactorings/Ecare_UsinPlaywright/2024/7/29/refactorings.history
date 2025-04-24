@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;OPD_Flow&apos; to &apos;Ecare_UsinPlaywright/src/main/java&apos;&#x0A;- Original project: &apos;Ecare_UsinPlaywright&apos;&#x0A;- Destination element: &apos;Ecare_UsinPlaywright/src/main/java&apos;&#x0A;- Original element: &apos;Ecare_UsinPlaywright/src/main/java/OPD_Flow&apos;" description="Copy package" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;OPD_Flow" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1721043039959" version="1.0"/>
+</session>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="25" passed="25" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-08T18:04:48 IST" name="Default suite" finished-at="2024-11-08T18:08:00 IST" duration-ms="192680">
+    <groups>
+    </groups>
+    <test started-at="2024-11-08T18:04:48 IST" name="Default test" finished-at="2024-11-08T18:08:00 IST" duration-ms="192680">
+      <class name="OPD_Flow_wise.OPD_Driver">
+        <test-method signature="patientRegLogin()[pri:1, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:04:48 IST" name="patientRegLogin" finished-at="2024-11-08T18:04:53 IST" duration-ms="5615" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- patientRegLogin -->
+        <test-method signature="patientReg()[pri:2, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:04:53 IST" name="patientReg" finished-at="2024-11-08T18:05:15 IST" duration-ms="22201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- patientReg -->
+        <test-method signature="bookAppointment()[pri:3, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:05:15 IST" name="bookAppointment" finished-at="2024-11-08T18:05:36 IST" duration-ms="20904" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookAppointment -->
+        <test-method signature="frontOfficeLogout()[pri:4, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:05:36 IST" name="frontOfficeLogout" finished-at="2024-11-08T18:05:39 IST" duration-ms="2363" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- frontOfficeLogout -->
+        <test-method signature="DoctorLogin()[pri:5, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:05:39 IST" name="DoctorLogin" finished-at="2024-11-08T18:05:41 IST" duration-ms="2534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DoctorLogin -->
+        <test-method signature="DoctorEMR()[pri:6, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:05:41 IST" name="DoctorEMR" finished-at="2024-11-08T18:06:08 IST" duration-ms="26952" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DoctorEMR -->
+        <test-method signature="doctorLogout()[pri:7, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:06:08 IST" name="doctorLogout" finished-at="2024-11-08T18:06:11 IST" duration-ms="2370" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doctorLogout -->
+        <test-method signature="bookTestLogin()[pri:8, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:06:11 IST" name="bookTestLogin" finished-at="2024-11-08T18:06:13 IST" duration-ms="2545" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookTestLogin -->
+        <test-method signature="bookLabTest()[pri:9, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:06:13 IST" name="bookLabTest" finished-at="2024-11-08T18:06:43 IST" duration-ms="29413" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookLabTest -->
+        <test-method signature="bookTestLogout()[pri:10, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:06:43 IST" name="bookTestLogout" finished-at="2024-11-08T18:06:50 IST" duration-ms="7198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookTestLogout -->
+        <test-method signature="LabFOLogin()[pri:11, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:06:50 IST" name="LabFOLogin" finished-at="2024-11-08T18:06:52 IST" duration-ms="2593" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LabFOLogin -->
+        <test-method signature="assignPheblotomist()[pri:12, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:06:52 IST" name="assignPheblotomist" finished-at="2024-11-08T18:06:56 IST" duration-ms="3612" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assignPheblotomist -->
+        <test-method signature="labFOLogout()[pri:13, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:06:56 IST" name="labFOLogout" finished-at="2024-11-08T18:06:58 IST" duration-ms="2372" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- labFOLogout -->
+        <test-method signature="phlebotomistLogin()[pri:14, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:06:58 IST" name="phlebotomistLogin" finished-at="2024-11-08T18:07:01 IST" duration-ms="2579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phlebotomistLogin -->
+        <test-method signature="collectSample()[pri:15, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:07:01 IST" name="collectSample" finished-at="2024-11-08T18:07:08 IST" duration-ms="7314" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- collectSample -->
+        <test-method signature="phlebotomistLogout()[pri:16, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:07:08 IST" name="phlebotomistLogout" finished-at="2024-11-08T18:07:11 IST" duration-ms="2368" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phlebotomistLogout -->
+        <test-method signature="labTechnicianLogin()[pri:17, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:07:11 IST" name="labTechnicianLogin" finished-at="2024-11-08T18:07:13 IST" duration-ms="2565" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- labTechnicianLogin -->
+        <test-method signature="labReport()[pri:18, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:07:13 IST" name="labReport" finished-at="2024-11-08T18:07:28 IST" duration-ms="14870" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- labReport -->
+        <test-method signature="labTechnicianLogout()[pri:19, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:07:28 IST" name="labTechnicianLogout" finished-at="2024-11-08T18:07:30 IST" duration-ms="2380" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- labTechnicianLogout -->
+        <test-method signature="labAdminLogin()[pri:20, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:07:30 IST" name="labAdminLogin" finished-at="2024-11-08T18:07:33 IST" duration-ms="2549" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- labAdminLogin -->
+        <test-method signature="approveReport()[pri:21, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:07:33 IST" name="approveReport" finished-at="2024-11-08T18:07:38 IST" duration-ms="4659" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- approveReport -->
+        <test-method signature="labAdminLogout()[pri:22, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:07:38 IST" name="labAdminLogout" finished-at="2024-11-08T18:07:40 IST" duration-ms="2366" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- labAdminLogout -->
+        <test-method signature="PharmacyLogin()[pri:23, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:07:40 IST" name="PharmacyLogin" finished-at="2024-11-08T18:07:43 IST" duration-ms="2545" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PharmacyLogin -->
+        <test-method signature="Phamacist()[pri:24, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:07:43 IST" name="Phamacist" finished-at="2024-11-08T18:07:58 IST" duration-ms="15276" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Phamacist -->
+        <test-method signature="PharmacyLogout()[pri:25, instance:OPD_Flow_wise.OPD_Driver@6821ea29]" started-at="2024-11-08T18:07:58 IST" name="PharmacyLogout" finished-at="2024-11-08T18:08:00 IST" duration-ms="2368" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PharmacyLogout -->
+      </class> <!-- OPD_Flow_wise.OPD_Driver -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

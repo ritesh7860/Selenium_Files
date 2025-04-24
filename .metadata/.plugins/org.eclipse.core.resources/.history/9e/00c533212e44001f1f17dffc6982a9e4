@@ -1,0 +1,9 @@
+package IPD_Flow;
+
+public class IPD_Nurse {
+
+	public static void main(String[] args) {
+
+	}
+
+}
