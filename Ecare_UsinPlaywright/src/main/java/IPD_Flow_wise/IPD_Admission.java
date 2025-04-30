@@ -18,7 +18,7 @@ public class IPD_Admission
 		Thread.sleep(2000);
 		page.click("//button");
 		Thread.sleep(2000);
-		page.locator("//*[@id='rc_select_2']").click();
+		page.locator("//*[contains(text(),'Select Room Type')]/preceding::input[1]").click();
 		Thread.sleep(2000);
 		page.locator("//div[contains(text(),'General Ward')]").click();
 		Thread.sleep(2000);

@@ -21,7 +21,7 @@ public class IPD_Lab_FO {
 		Thread.sleep(2000);
 		page.locator("//input[@id='rc_select_2']").fill("Sameer");
 		page.click("//*[contains(text(), 'Sameer')]");
-		page.click("//div[2]/div/button");
+		page.click("//*[contains(text(), 'Save')]");
 		page.locator("//*[@id='btnvisibility']/button[1]/span").click();
 	}
 

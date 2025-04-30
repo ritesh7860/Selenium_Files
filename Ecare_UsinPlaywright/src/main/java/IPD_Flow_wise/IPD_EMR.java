@@ -1,13 +1,6 @@
 package IPD_Flow_wise;
 
-import java.util.List;
-
-import com.microsoft.playwright.Browser;
-import com.microsoft.playwright.BrowserContext;
-import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
-import com.microsoft.playwright.Playwright;
-
 public class IPD_EMR {
 
 	public void ipd_Emr(Page page, String uhid) throws InterruptedException 
@@ -17,7 +10,7 @@ public class IPD_EMR {
 		Thread.sleep(1000);
 		page.click("//tbody/tr[2]/td[2]/div");
 		page.click("(//div[1]/ul/li[3])");
-		page.fill("input[type='search'][id='rc_select_0']", "a");
+		page.fill("(//input)[1]", "a");
 		page.click("div[name='Abiraterone 250.00 mg/1']");
 		page.fill("input[name='dose']", "1");
 		page.fill("input[type='search'][id='rc_select_2']", "as");
@@ -36,8 +29,9 @@ public class IPD_EMR {
 		page.click("input[type='search'][id='rc_select_4']");
 		page.fill("input[type='search'][id='rc_select_4']", "Lipid");
 		Thread.sleep(1000);
+		page.keyboard().press("Enter");
 		// Blood Count id >> 85 on dev and complete blood count id >> 106 on demo
-		page.locator("//*[@id='295']/div").click();
+//		page.locator("//*[@id='295']/div").click();
 		page.click("//*[contains(text(),'Save')]");
 	}
 

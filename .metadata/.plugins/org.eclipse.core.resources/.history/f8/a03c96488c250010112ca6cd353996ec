@@ -1,0 +1,31 @@
+package IPD_Flow_wise;
+
+import java.util.regex.Pattern;
+import com.microsoft.playwright.Page;
+
+public class IPD_Pathologist {
+
+	public void ipd_Pathologist(Page page, String uhid) throws InterruptedException 
+	{
+		page.fill("//div[1]/div/span/input", uhid);
+		Thread.sleep(3000);
+		
+		String adm =page.locator("//tr[2]/td[2]/span").innerText();	
+		boolean containsNumeric = Pattern.compile("\\d").matcher(adm).find();
+		System.out.println(adm);
+		System.out.println(containsNumeric);
+		if (containsNumeric)
+		{
+			page.click("//tr[2]/td[3]/div/span/span");
+			page.click("//tr[2]/td[6]/span");
+			Thread.sleep(2000);
+			page.click("//button[2]");
+			page.locator("//button/span[contains(text(),'Yes')]").click();
+		}
+		else {
+			System.out.println("This patient is not in the IPD");
+		}
+
+	}
+
+}

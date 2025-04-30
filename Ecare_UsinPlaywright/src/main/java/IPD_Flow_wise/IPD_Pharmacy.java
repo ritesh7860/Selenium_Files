@@ -37,12 +37,12 @@ public class IPD_Pharmacy {
 		
 		//login Nurse and Receive Medicine
 		
-		page.locator("//input[@placeholder='EMAIL/USERNAME']").fill("sneha@mightcode.com");
-		page.getByPlaceholder("PASSWORD").fill("Nurse@123");
+		page.locator("//input[@placeholder='EMAIL/USERNAME']").fill("shweta@mightcode.com");
+		page.getByPlaceholder("PASSWORD").fill("Test@123");
 		page.click("//button[@type='submit']");
 		
 		page.fill("input[placeholder='Search Patient Name/Adm. No/UHID']", uhid);
-		page.click("//tbody/tr[2]/td[3]/div");
+		page.click("//tbody/tr[2]/td[2]/div/span[1]");
 		
         // Click on the Medication and request 
         

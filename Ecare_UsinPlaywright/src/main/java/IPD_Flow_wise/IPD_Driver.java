@@ -17,12 +17,12 @@ public class IPD_Driver {
 		BrowserContext context = browser.newContext(new Browser.NewContextOptions().setViewportSize(null));
 		Page page = context.newPage();
 		
-		String uhid = "ECARE_0000001845";
-		
+		String uhid = "ECARE_0000004691";
+		//  ECARE_0000004396
 		Login login = new Login();
 		Logout out = new Logout();
 		
-		login.login_method("105", "Test@123", page);
+		login.login_method("105", "Unicode@2022$", page);
 		IPD_Admission admission = new IPD_Admission();
 		admission.ipdAdmission(page, uhid);
 		out.logout(page);
@@ -40,7 +40,7 @@ public class IPD_Driver {
 		out.logout(page);
 		
 		Thread.sleep(2000);
-		login.login_method("sneha@mightcode.com", "Nurse@123",page);
+		login.login_method("shweta@mightcode.com", "Test@123",page);
 		IPD_Nurse nurse = new IPD_Nurse();
 		nurse.nurseFlow(page, uhid);
 		out.logout(page);

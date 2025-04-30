@@ -17,17 +17,17 @@ public class OPD_Driver {
 		BrowserContext context = browser.newContext(new Browser.NewContextOptions().setViewportSize(null));
 		Page page = context.newPage();
 		
-//		String uhid = "ECARE_0000002533";
+//		String uhid = "ECARE_0000004691";
 		
-		String name ="Neha Singh";
-		String mail="neha123@mightcode.com";
-		String contact="8752590196";
-		String id="V4170709";
+		String name ="Sulekha Singh";
+		String mail="sulekha@mightcode.com";
+		String contact="7860167222";
+		String id="V4170707";
 		
 		Login login = new Login();
 		Logout out = new Logout();
 		
-		login.login_method("105", "Test@123",page);
+		login.login_method("105", "Unicode@2022$",page);
 		Patient_Registration reg =  new Patient_Registration();
 		String uhid = reg.registration(page, name, mail, contact, id);
 		
@@ -42,7 +42,7 @@ public class OPD_Driver {
 		out.logout(page);
 		Thread.sleep(1000);
 		
-		login.login_method("105", "Test@123",page);
+		login.login_method("105", "Unicode@2022$",page);
 		OPD_Lab book_test = new OPD_Lab();
 		book_test.bookTest(page,uhid);
 		out.logout(page);

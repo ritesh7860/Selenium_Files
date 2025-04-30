@@ -64,12 +64,12 @@ public class Patient_Registration {
 		page.locator("//input[@name='relative_contact_number']").fill("7380830760");
 		Thread.sleep(2000);
 		page.click("//*[contains(text(),'Save')]");
-
-		Locator idLocator = page.locator("//span[@class='ant-typography block css-y4pjvz']");
+		Thread.sleep(2000);
+		Locator idLocator = page.locator("//*[contains(text(),'UHID')]");
 
 		// Extract the text
 		String idText = idLocator.textContent();
-
+		
 		// Split the text to get the UHID
 		String uhid = idText.split(": ")[1];
 

@@ -11,7 +11,7 @@ public class OPD_Phlebotomist {
 
 		page.fill("//div[1]/div/span/input", uhid);
 		Thread.sleep(1000);
-		page.click("//tr[2]/td[2]/span/span[1]");
+		page.click("//tr[2]/td[2]/div/span[1]/span");
 
 		Thread.sleep(2000);
 		Locator checkboxes = page.locator("//input[@type='checkbox']");

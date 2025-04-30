@@ -10,6 +10,6 @@ public class LAB_FO {
 		Thread.sleep(2000);
 		page.locator("//input[@id='rc_select_1']").fill("Sameer");
 		page.click("//*[contains(text(), 'Sameer')]");
-		page.click("//div[2]/div/button");
+		page.click("(//button)[2]");
 	}
 }

@@ -13,7 +13,7 @@ public class OPD_Pharmacy {
 		page.locator("//input[@placeholder='Search Patient Name/UHID']").fill(uhid);
 		page.keyboard().press("Enter");
 		Thread.sleep(1000);
-		Locator accept = page.locator("//tr/td/article[contains(text(),'Accept')]");
+		Locator accept = page.locator("//*[contains(text(),'Accept')]");
 		int count = 0;
 		count = accept.count();
 		System.out.println(count);
@@ -23,7 +23,7 @@ public class OPD_Pharmacy {
 		page.locator("//div/button[2]").click();
 		Thread.sleep(2000);
 		page.locator("//*[contains(text(),'Proceed')]").click();
-		page.locator("//*[contains(text(),'Proceed')]").click();
+//		page.locator("//*[contains(text(),'Proceed')]").click();
 		page.locator("//*[contains(text(),'Generate Invoice')]").click();
 		page.locator("//*[contains(text(),'Cancel')]").click();
 	}

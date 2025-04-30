@@ -13,12 +13,13 @@ public class IPD_Nurse {
 	public void nurseFlow(Page page, String uhid) throws InterruptedException 
 	{
 		page.fill("input[placeholder='Search Patient Name/Adm. No/UHID']", uhid);
-		page.click("//tbody/tr[2]/td[3]/div");
+		page.click("//tbody/tr[2]/td[2]/div/span[1]");
 		
 		//Click on Vitals section and fill Vitals
 		
 		page.click("(//div[1]/ul/li[2])");   
 		//(div[1]/ul/li[2])[2]
+		Thread.sleep(2000);
 		page.locator("//input[@name='Heart Rate']").fill("98");
         page.locator("//input[@name='Pulse']").fill("98");
         page.locator("//input[@name='Blood Sugar']").fill("120");

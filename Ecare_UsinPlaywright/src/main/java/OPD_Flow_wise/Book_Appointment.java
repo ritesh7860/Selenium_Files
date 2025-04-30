@@ -12,12 +12,12 @@ public class Book_Appointment {
 		page.click("//*[contains(text(),'Book Appointment')]");
 
 		Thread.sleep(2000);
-		page.locator("//*[@id='rc_select_0']").fill("Critical Care & Anesthesia");
+		page.locator("(//input)[1]").fill("Critical Care & Anesthesia");
 		Thread.sleep(1000);
 		page.keyboard().press("Enter");
 		Thread.sleep(2000);
 
-		page.locator("//*[@id='rc_select_1']").fill("Pakhi");
+		page.locator("(//input)[2]").fill("Pakhi");
 		page.locator("//*[contains(text(),'Dr. Pakhi Shah')]").click();
 		Thread.sleep(2000);
 
