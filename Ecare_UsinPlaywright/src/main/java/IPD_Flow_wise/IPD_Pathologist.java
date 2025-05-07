@@ -7,7 +7,7 @@ public class IPD_Pathologist {
 
 	public void ipd_Pathologist(Page page, String uhid) throws InterruptedException 
 	{
-		page.wait(2000);
+		Thread.sleep(2000);
 		page.fill("//div[1]/div/span/input", uhid);
 		Thread.sleep(3000);	
 		String adm =page.locator("//tr[2]/td[2]/span").innerText();	

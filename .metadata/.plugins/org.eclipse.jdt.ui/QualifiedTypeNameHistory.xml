@@ -23,4 +23,5 @@
     <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.By.ByXPath"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="IPD_Discharge.Doctor_Login"/>
 </qualifiedTypeNameHistroy>
