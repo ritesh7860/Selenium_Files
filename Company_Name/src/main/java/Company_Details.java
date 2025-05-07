@@ -18,13 +18,13 @@ public class Company_Details {
 		WebDriver driver = new ChromeDriver(options);
 
 //		ChromeDriver driver = new ChromeDriver();
-		driver.get("https://clutch.co/us/developers/information-technology-industry");
+		driver.get("https://clutch.co/developers/information-technology-industry?geona_id=40823");
 		driver.manage().window().maximize();
 		int n=0,a=0;
 		while(true) 
 		{
 			n++;
-			String link = String.format("https://clutch.co/us/developers/information-technology-industry?page=%d", n);
+			String link = String.format("https://clutch.co/developers/information-technology-industry?geona_id=40823&page=%d", n);
 			int i=1;
 			for(i=1;i<=64;i++) {
 				a++;

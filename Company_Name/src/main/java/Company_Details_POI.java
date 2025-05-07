@@ -19,7 +19,7 @@ public class Company_Details_POI {
         options.addArguments("--disable-blink-features=AutomationControlled");
 
         WebDriver driver = new ChromeDriver(options);
-        driver.get("https://clutch.co/us/developers/information-technology-industry");
+        driver.get("https://clutch.co/developers/information-technology-industry?geona_id=40823");
         driver.manage().window().maximize();
 
         // Excel setup
@@ -74,11 +74,11 @@ public class Company_Details_POI {
                     break;
                 }
             }
-            String link = String.format("https://clutch.co/us/developers/information-technology-industry?page=%d", page);
+            String link = String.format("https://clutch.co/developers/information-technology-industry?geona_id=40823&page=%d", page);
             driver.get(link);
             Thread.sleep(8000);
             page++;
-            if (page > 40) break; // Change this to crawl more pages if needed
+            if (page > 56) break; // Change this to crawl more pages if needed
         }
 
         // Auto-size columns
@@ -87,7 +87,7 @@ public class Company_Details_POI {
         }
 
         // Write to file
-        FileOutputStream fileOut = new FileOutputStream("CompanyData.xlsx");
+        FileOutputStream fileOut = new FileOutputStream("Europe_CompanyData.xlsx");
         workbook.write(fileOut);
         fileOut.close();
         workbook.close();
